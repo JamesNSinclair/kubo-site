@@ -20,6 +20,14 @@ p {
   padding-right: 5px;
 }
 
+/* ID */
+
+#game {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
 
 
 /* MEDIA QUERIES */
