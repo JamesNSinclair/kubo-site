@@ -50,13 +50,112 @@ p {
   grid-gap: 10px;
   margin: 50px;
   justify-content: center;
+  perspective: 500px;
 }
 
-.card {
-  background-color: black;
+.game-card {
+  position: relative;
   height: 175px;
   width: 125px;
+
 }
+
+.card-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 500ms ease-in-out;
+}
+
+.game-card.visible .card-back {
+  transform: rotateY(-180deg);
+}
+
+.game-card.visible .card-front {
+  transform: rotateY(0);
+}
+
+
+.card-front {
+  transform: rotateY(180deg);
+
+}
+
+.card-value,
+.card-sleeve {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  transition: transform 200ms ease-in-out;
+}
+
+.card-back:hover .card-sleeve {
+transform: scale(1.1);
+}
+
+
+/*SHINE*/
+
+.effect {
+  overflow: hidden;
+}
+
+.effect:after {
+
+  animation: shine 5s cubic-bezier(.46,.91,1,.94) infinite 500ms;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -220%;
+  height: 350px;
+  width: 250px;
+  opacity: 0;
+  transform: rotate(30deg);
+
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+
+
+/* Active state */
+
+.effect:active:after {
+  opacity: 0;
+}
+
+@keyframes shine{
+  10% {
+    opacity: 1;
+    top: -35%;
+    left: -35%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -35%;
+    left: -35%;
+    transition-property: left, top, opacity;
+  }
 }
 
 /* MEDIA QUERIES */
