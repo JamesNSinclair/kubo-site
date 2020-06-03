@@ -27,7 +27,20 @@ body {
 }
 
 .navbar {
-background-image: url('images/kubo-verticle-nav.jpg');
+  opacity: 0.8;
+background-image: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
+
+
+}
+
+.bts {
+  font-size: 90%;
+}
+
+.logo {
+  height: 80px;
+  width: 100px;
+  margin-top: 30px;
 }
 
 #home-content {
@@ -48,7 +61,7 @@ background-image: url('images/kubo-verticle-nav.jpg');
 
 .main-content .main-intro,
 .main-content .youTube {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -98,7 +111,7 @@ background-image: url('images/kubo-verticle-nav.jpg');
 
   .faded-overlay {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.001);
   }
 
 }
