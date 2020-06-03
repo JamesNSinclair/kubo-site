@@ -53,7 +53,7 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 
 #myVideo {
   object-fit: cover;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100vw;
@@ -119,11 +119,68 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
   }
 }
 
+
+#monkey {
+  background: url("../../kubo-site/images/blue-background.jpg");
+  border: 1px solid white;
+
+}
+
+#beatle {
+  background: url("../../kubo-site/images/card-color.jpg");
+  border: 1px solid gray
+}
+
+#monkey,
+#beatle {
+  width: 250px;
+  height:350px;
+  background-position: center;
+ background-size: cover;
+ overflow: hidden;
+ display: flex;
+ margin: auto;
+ flex-direction: column;
+
+}
+
+#monkey img:hover,
+#beatle img:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+.card-logo {
+ height: 321px;
+ width: auto;
+ margin: auto;
+}
+
+
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
-
-
 
   .navbar {
     opacity: 1;
@@ -143,12 +200,15 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
   display: none;
 }
 
+#myVideo,
 .youTube {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
   height: 0;
 }
+
+#myVideo iframe,
 .youTube iframe{
   position: absolute;
   top:0;
@@ -160,6 +220,14 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 }
 
 @media only screen and (min-width: 600px) {
+
+  #monkey {
+    margin-left: 250px;
+  }
+
+  #beatle {
+    margin-right: 250px;
+  }
 
   .trivia {
    height: 100vh;
