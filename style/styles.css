@@ -28,7 +28,7 @@ body {
 
 .navbar {
   opacity: 0.8;
-background-image: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
+background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 }
 
 #main-page {
@@ -85,10 +85,7 @@ background-image: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
   width: 50px;
   fill: white;
 }
-.trivia {
- height: 100vh;
- color: white;
-}
+
 
 .carousel-item span {
   position: absolute;
@@ -126,6 +123,22 @@ background-image: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 
 @media (max-width: 600px) {
 
+
+
+  .navbar {
+    opacity: 1;
+    background: black;
+    border-bottom: 1px white solid;
+  }
+
+  #home-content {
+    min-height: 100vh;
+    background: url("../../kubo-site/images/kubo-mobile.png");
+    background-position: center;
+   background-size: cover;
+   overflow: hidden;
+  }
+
   #myVideo {
   display: none;
 }
@@ -147,6 +160,11 @@ background-image: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 }
 
 @media only screen and (min-width: 600px) {
+
+  .trivia {
+   height: 100vh;
+    }
+
   .hide {
     opacity: 0;
   }
