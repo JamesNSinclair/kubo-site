@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
   min-height: 100vh;
+    width: 100vw;
 }
 
 body {
@@ -16,213 +17,137 @@ body {
 
 }
 
-p {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-/* ID */
-
-#game {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
-}
-
-
-/*CLASSES*/
-
-.page-title {
-  text-align: center
-}
-
-.game-info-container {
-  grid-column: 1/-1;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.game-container {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
-  margin: 50px;
-  justify-content: center;
-  perspective: 500px;
-}
-
-.game-card {
-  position: relative;
-  height: 175px;
-  width: 125px;
-
-}
-
-.card-face {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 500ms ease-in-out;
-}
-
-.game-card.visible .card-back {
-  transform: rotateY(-180deg);
-}
-
-.game-card.visible .card-front {
-  transform: rotateY(0);
-}
-
-
-.card-front {
-  transform: rotateY(180deg);
-
-}
-
-.card-value,
-.card-sleeve {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
-  transition: transform 200ms ease-in-out;
-}
-
-.card-back:hover .card-sleeve {
-transform: scale(1.1);
-}
-
-
-/*SHINE*/
-
-.gloss {
-  overflow: hidden;
-}
-
-.gloss:after {
-
-  animation: shine 5s cubic-bezier(.46,.91,1,.94) infinite 500ms;
-  animation-fill-mode: forwards;
-  content: "";
-  position: absolute;
-  top: -110%;
-  left: -220%;
-  height: 350px;
-  width: 250px;
-  opacity: 0;
-  transform: rotate(30deg);
-
-  background: rgba(255, 255, 255, 0.13);
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.13) 77%,
-    rgba(255, 255, 255, 0.5) 92%,
-    rgba(255, 255, 255, 0.0) 100%
-  );
-}
-
-/* Hover state - trigger gloss */
-
-
-/* Active state */
-
-.gloss:active:after {
-  opacity: 0;
-}
-
-@keyframes shine{
-  10% {
-    opacity: 1;
-    top: -35%;
-    left: -35%;
-    transition-property: left, top, opacity;
-    transition-duration: 0.7s, 0.7s, 0.15s;
-    transition-timing-function: ease;
-  }
-  100% {
-    opacity: 0;
-    top: -35%;
-    left: -35%;
-    transition-property: left, top, opacity;
-  }
-}
-
-/* OVERLAY */
-
-.overlay-text {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
+.main-intro {
   color: white;
-  -webkit-text-stroke: 1px black;
-    display: none;
 }
 
-.overlay-text-small {
-  font-size: .3em;
-}
-
-
-.overlay-text.visible {
+.main-content {
   display: flex;
   flex-direction: column;
-  animation: overlay-grow 500ms forwards;
 }
 
-@keyframes overlay-grow {
-  from {
-    background-color: rgba(0, 0, 0, 0);
-    font-size 0;
-  }
+.navbar {
+background-image: url('images/kubo-verticle-nav.jpg');
+}
 
-  to {
-    background-color: rgba(0, 0, 0, .8);
-    font-size: 6em;
+#home-content {
+    transition: transform 500ms ease-in-out;
+}
+
+#myVideo {
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: -100;
+  background-size: auto;
+  overflow: hidden;
+}
+
+.main-content .main-intro,
+.main-content .youTube {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fade-in {
+  animation: fadeIn ease 4s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
   }
 }
 
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
-  .game-container {
-    grid-template-columns: repeat(2, auto);
-  }
 
-  .game-info-container {
-    flex-direction: column;
-    align-items: center;
-  }
+  #myVideo {
+  display: none;
 }
 
-
-@media only screen and (min-width: 320px) {
+.youTube {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.youTube iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+}
+
+@media only screen and (min-width: 600px) {
+  .hide {
+    opacity: 0;
+  }
+
+  .faded-overlay {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+}
 
 @media only screen and (min-width: 768px) {
+
+
+
+  .navbar-expand-lg .navbar-nav,
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+#sitenav {
+  grid-area: nav;
+}
+
+#mainpage {
+  grid-area: mainpage;
+}
+
+  .pagesetup {
+    display: grid;
+    height: 100vh;
+    grid-row: 1;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "nav mainpage";
+  }
+
+.navbar-brand {
+  margin-top: 2rem;
+}
+.navbar-collapse {
+  margin-top: 3rem;
+  flex-grow: 0;
+}
+
+.main-intro h2,
+.main-intro p {
+  margin: 15px 200px;
+}
 
 }
 
 
 
 @media only screen and (min-width: 1024px) {
+
 
 
 }
