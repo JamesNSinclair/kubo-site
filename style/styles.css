@@ -30,6 +30,7 @@ body {
 .navbar {
 opacity: 0.8;
 background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
+z-index: 55;
 }
 
 
@@ -255,8 +256,6 @@ width: 100%;
 
 }
 
-
-
 @media only screen and (min-width: 600px) {
 
 
@@ -285,8 +284,6 @@ width: 100%;
   .faded-overlay {
         background-color: rgba(0, 0, 0, 0.8);
   }
-
-
 
 }
 
