@@ -12,6 +12,8 @@ html {
     width: 100vw;
 }
 
+hover { cursor: pointer; }
+
 body {
   margin: 0px;
 
@@ -27,9 +29,12 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  height: 100vh;
   opacity: 0.8;
 background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 }
+
 
 #main-page {
   height: 100vh;
@@ -51,6 +56,7 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
     transition: transform 500ms ease-in-out;
 }
 
+#homeVideo,
 #myVideo {
   object-fit: cover;
   position: fixed;
@@ -106,7 +112,7 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 
 
 .fade-in {
-  animation: fadeIn ease 4s;
+  animation: fadeIn ease 3s;
 }
 
 
@@ -196,10 +202,12 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
    overflow: hidden;
   }
 
+  #homeVideo,
   #myVideo {
   display: none;
 }
 
+#homeVideo,
 #myVideo,
 .youTube {
   position: relative;
@@ -208,6 +216,7 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
   height: 0;
 }
 
+#homeVideo iframe,
 #myVideo iframe,
 .youTube iframe{
   position: absolute;
@@ -239,7 +248,7 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 
   .faded-overlay {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.001);
+        background-color: rgba(0, 0, 0, 0.8);
   }
 
 }
