@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/wordgame.css">
+    <script src="javascript/script.js" async></script>
     <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&display=swap" rel="stylesheet">
     <title>Kubo and the Two Strings</title>
@@ -41,28 +43,46 @@
      <video height="100vh" autoplay muted id="myVideo">
 <source src="videos/kubo-crane.mp4" type="video/mp4">
 </video>
-     <div id="home-content" class="main-content text-white trivia d-flex flex-row align-items-center justify-content-around">
+</div>
+<div class="main-container faded-light-overlay">
+  <div id="game-over-text" class="overlay-text">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart </span>
+        </div>
+        
+      <div id="banner" class="section">
+        <h2 class="header">Wheel of Success</h2>
+      </div>
 
+      <div id="phrase" class="section">
+        <ul></ul>
+      </div>
+      <div id="qwerty" class="section">
+        <div id="keyboard" class="keyrow">
+          <button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button>
+        </div>
+        <div id="keyboard" class="keyrow">
+          <button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button>
+        </div>
+        <div id="keyboard" class="keyrow">
+          <button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button>
+        </div>
+      </div>
 
-<a href="file:///C:/Users/James/Desktop/kubo-site/wordgame.html">
-
-      <div id="monkey">
-           <img class="card-logo" src="images/monkey-logo.png">
-          </div>
-        </a>
-
-
-
-<a href="file:///C:/Users/James/Desktop/kubo-site/kubo-match.html">
-  <div id="beatle">
-          <img class="card-logo" src="images/beatle-logo.png">
-        </div></a>
-
+      <div id="scoreboard" class="section">
+        <ol>
+          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+        </ol>
+      </div>
     </div>
-  </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </body>
+    <script src='javascript/wordscripts.js'></script>
+  </body>
 </html>

@@ -132,7 +132,7 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 
 #beatle {
   background: url("../../kubo-site/images/card-color.jpg");
-  border: 1px solid gray
+  border: 1px solid gray;
 }
 
 #monkey,
@@ -181,6 +181,38 @@ background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
  margin: auto;
 }
 
+.faded-light-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* OVERLAY */
+
+.overlay-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  -webkit-text-stroke: 1px black;
+    display: none;
+}
+
+.overlay-text-small {
+  font-size: .3em;
+}
+
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
 
 /* MEDIA QUERIES */
 
