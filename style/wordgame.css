@@ -63,6 +63,7 @@ button {
   height: 100%;
   max-height: 900px;
   text-align: center;
+  width: 100%;
 }
 
 .section {
@@ -124,18 +125,18 @@ button {
 /* Overlay */
 
 #overlay {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  color: #FFFFFF;
-  justify-content: center;
-width: 100%;
-height: 100%;
-  border-radius: 5px;
+ position: fixed;
+    color: #FFFFFF;
+
+  width: 100%;
+  height: 100%;
+
 }
 
 .title {
-  color: #FFF;
+  color: #b82e1f;
+
+
 }
 
 .start {
