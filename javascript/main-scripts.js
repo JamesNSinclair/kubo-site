@@ -9,6 +9,6 @@ const info = document.getElementById("home-content")
           window.setTimeout(()=>{
              info.classList.remove('hide');
            info.classList.add('fade-in');
-         }, 500)
+         }, 200)
 
        }
