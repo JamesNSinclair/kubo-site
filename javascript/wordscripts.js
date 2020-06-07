@@ -5,10 +5,10 @@ const lives = document.getElementsByClassName("tries");
 const startButton = document.getElementById('startButton')
 const overlay = document.getElementById('overlay');
 const phrases = [
-"may the force be with you",
-"theres no place like home",
-"im the king of the world",
-"carpe diem",
+"sword unbreakable",
+"helmet invulnerable",
+"long lake",
+"armour impenat",
 "its alive"
 ];
 
@@ -78,8 +78,8 @@ keyboard.addEventListener("click", (event) => {
 
                 if (letterFound !== 'correct') {
                   for (let i = 0; i < lives.length; i+=1)
-                  if (lives[i].firstElementChild.src.includes('images/liveHeart.png')) {
-                lives[i].firstElementChild.src = 'images/lostHeart.png';
+                  if (lives[i].firstElementChild.src.includes('images/oragami-bird.png')) {
+                lives[i].firstElementChild.src = 'images/lost-oragami-bird.png';
                 break;
               }
                         missed+=1;

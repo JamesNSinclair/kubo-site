@@ -3,8 +3,8 @@
 :root {
   --color-win: #78CF82;
   --color-lose: #D94545;
-  --color-start: #5b85b7;
-  --color-neutral: #445069;
+  --color-start: white;
+  --color-neutral: red;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+
 }
 
 li, ol, ul {
@@ -31,10 +32,13 @@ li, ol, ul {
   display: inline-block;
 }
 
+#phrase ul {
+  line-height: 4;
+}
+
 h2 {
   margin: 0;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
   font-size: var(--font-size-large);
   margin: 0;
 }
@@ -69,6 +73,7 @@ button {
 /* Title */
 
 .header {
+  margin-bottom: 15px;
   color: var(--color-start);
 }
 
@@ -78,7 +83,7 @@ button {
   font-size: var(--font-size-medium);
   height: 65px;
   width: 65px;
-  padding: 20px 1px 0 1px;
+  padding: auto;
   margin-right: 2px;
   color: transparent;
   background: var(--color-neutral-light);
@@ -90,8 +95,8 @@ button {
 }
 
 .show {
-  color: #000;
-  background-color: #76CE82;
+  color: white;
+  background-color: red;
 }
 
 /* Keyboard */
@@ -124,10 +129,8 @@ button {
   position: fixed;
   color: #FFFFFF;
   justify-content: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+width: 100%;
+height: 100%;
   border-radius: 5px;
 }
 
@@ -157,4 +160,11 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+@media only screen and (min-width: 600px) {
+
+  button {
+     padding: .2rem 2.5rem;
+   }
 }
