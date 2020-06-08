@@ -179,6 +179,10 @@ button {
 
 @media only screen and (min-width: 600px) {
 
+  .main-content {
+      flex-direction: row;
+  }
+
   button {
      padding: .1rem 2.5rem;
    }
