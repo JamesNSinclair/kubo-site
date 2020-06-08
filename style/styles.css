@@ -89,7 +89,7 @@ z-index: 65;
   overflow: hidden;
   color: white;
   align-items: center;
-  margin-bottom: 25px;
+      margin-bottom: 25px;
 
 }
 
@@ -149,7 +149,7 @@ background-image: linear-gradient(315deg, #e8c99b 0%, #e8bc85 74%);
  background-size: cover;
  overflow: hidden;
  display: flex;
- margin: auto;
+ margin-bottom: 25px;
  flex-direction: column;
 
 }
@@ -197,8 +197,10 @@ background-image: linear-gradient(315deg, #e8c99b 0%, #e8bc85 74%);
 
 .overlay-text {
   position: fixed;
-height: 100%;
-width: 100%;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,6 +304,10 @@ width: 100%;
 
 @media only screen and (min-width: 600px) {
 
+  .overlay-text {
+    padding-left: 200px;
+  }
+
   .slide-img {
     margin-left: 15px;
     width: auto;
@@ -309,9 +315,16 @@ width: 100%;
 
     }
 
+    #shamisien,
+    #monkey,
+    #beatle {
+     margin: auto;
+    }
+
     .char-profile {
       flex-direction: row;
-      }
+      margin-bottom: 0px;
+            }
 
     .carousel-item span {
       position: absolute;
@@ -333,10 +346,6 @@ width: 100%;
   height: 100vh;
 }
 
-  #monkey,
-  #beatle {
-    margin-top: auto;
-  }
 
   .trivia {
    height: 100vh;

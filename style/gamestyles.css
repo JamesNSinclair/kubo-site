@@ -40,7 +40,7 @@ p {
   display: flex;
   flex-direction: column;
       text-align: center;
-}
+    }
 
 .page-title {
   text-align: center
@@ -186,6 +186,13 @@ transform: scale(1.1);
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
+
+  #mainpage {
+  background-image: url("../images/game-background.jpg");
+  background-size: cover;
+     background-repeat: no-repeat;
+  }
+
   .game-container {
     grid-template-columns: repeat(2, auto);
   }
