@@ -18,6 +18,12 @@ body {
 
 }
 
+
+a:hover {
+  text-decoration: none;
+
+}
+
 .main-intro {
   color: white;
 }
@@ -122,6 +128,11 @@ z-index: 65;
   }
 }
 
+.game-title {
+font-size: 20px;
+padding-bottom: 15px;
+
+}
 
 #monkey {
   background: url("../../kubo-site/images/blue-background.jpg");
@@ -129,15 +140,22 @@ z-index: 65;
 
 }
 
-#beatle {
-  background: url("../../kubo-site/images/card-color.jpg");
-  border: 1px solid gray;
+#shamisien {
+background-image: linear-gradient(315deg, #e8c99b 0%, #e8bc85 74%);
+  border: 1px solid white;
+
 }
 
+#beatle {
+  background: url("../../kubo-site/images/card-color.jpg");
+  border: 1px solid black;
+}
+
+#shamisien,
 #monkey,
 #beatle {
   width: 250px;
-  height:350px;
+  height:360px;
   background-position: center;
  background-size: cover;
  overflow: hidden;
@@ -147,6 +165,7 @@ z-index: 65;
 
 }
 
+#shamisien img:hover,
 #monkey img:hover,
 #beatle img:hover {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -220,6 +239,11 @@ width: 100%;
 
 }
 
+.top-space {
+  padding-top: 120px;
+  display:flex;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
@@ -268,6 +292,14 @@ width: 100%;
 
 @media only screen and (min-width: 600px) {
 
+  .top-space {
+    padding-top: 5px;
+  }
+
+  .main-content {
+      flex-direction: row;
+  }
+
 .logo {
 
     margin-top: 30px;
@@ -278,12 +310,9 @@ width: 100%;
   height: 100vh;
 }
 
-  #monkey {
-    margin-left: 250px;
-  }
-
+  #monkey,
   #beatle {
-    margin-right: 250px;
+    margin-top: auto;
   }
 
   .trivia {

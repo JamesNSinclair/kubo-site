@@ -13,6 +13,10 @@ html {
 }
 
 
+h1 {
+  font-size: 35px
+}
+
 }
 
 p {
@@ -31,6 +35,12 @@ p {
 
 
 /*CLASSES*/
+
+.game-information {
+  display: flex;
+  flex-direction: column;
+      text-align: center;
+}
 
 .page-title {
   text-align: center
@@ -172,6 +182,7 @@ transform: scale(1.1);
   }
 }
 
+
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
@@ -181,17 +192,27 @@ transform: scale(1.1);
 
   .game-info-container {
     flex-direction: column;
-    align-items: center;
   }
 }
 
 
 @media only screen and (min-width: 320px) {
+
 }
 
 
 @media only screen and (min-width: 768px) {
 
+  h1 {
+    font-size: 35px
+  }
+
+  .game-information {
+
+    flex-direction: row;
+    text-align: center;
+        text-align: left;
+  }
 }
 
 
