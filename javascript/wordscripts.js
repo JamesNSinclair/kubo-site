@@ -58,7 +58,7 @@ function checkLetter(guess) {
   for (let i = 0; i < letters.length; i+=1) {
       if (letters[i].innerHTML.toLowerCase() === guess) {
           letterFound = 'correct';
-          letters[i].classList.add("show");
+          letters[i].classList.add("showing");
 
                 }
       }
@@ -87,7 +87,7 @@ keyboard.addEventListener("click", (event) => {
               //CHECK WIN
 
               function checkWin() {
-                let unsolved = document.querySelectorAll('.show').length;
+                let unsolved = document.querySelectorAll('.showing').length;
                   let solved = document.querySelectorAll('.letter').length;
 
                         if (unsolved === solved) {
@@ -96,15 +96,8 @@ keyboard.addEventListener("click", (event) => {
                   document.querySelector("#overlay").classList.add("win");
                   document.querySelector(".title").innerHTML = "Winner Winner Chicken Dinner!!";
                   document.querySelector("#startButton").inner.html = "Another Go?"
+                  restart();
 
-                    startButton.addEventListener('click', () => {
-  console.log("hello world");
-  let missed = 0;
-  for (let i = 0; i < lives.length; i++) {
-         lives[i].firstChild.src = 'images/oragami-bird.png';
-     }
-  addPhraseToDisplay(chars);
-});
                 }
 
             else if (unsolved !== solved && missed >= 5) {
@@ -113,29 +106,7 @@ keyboard.addEventListener("click", (event) => {
               document.querySelector("#overlay").classList.add("lose");
                   document.querySelector(".title").innerHTML = "You Lose!!";
                   document.querySelector("#startButton").innerHTML = "Another GO?";
-
-                  startButton.addEventListener('click', () => {
-  console.log("hello world");
-
-  for (let i = 0; i < lives.length; i++) {
-         lives[i].firstChild.src = 'images/oragami-bird.png';
-     }
-     const chosenLetters = document.querySelectorAll('.chosen');
-        for (let i = 0; i < chosenLetters.length; i++) {
-            chosenLetters[i].classList.remove("chosen");
-            chosenLetters[i].disabled = false;
-        }
-          document.querySelector("#overlay").classList.remove("lose");
-          const letters = document.querySelectorAll('#phrase ul li');
-
-
-      for (let i = 0; i < letters.length; i++) {
-          ul.removeChild(letters[i]);
-      }
-          missed = 0;
-          let chars = getRandomPhraseAsArray(phrases);
-          addPhraseToDisplay(chars);
-});
+                  restart()
           }
       }
 
@@ -143,3 +114,29 @@ keyboard.addEventListener("click", (event) => {
     }
 
 });
+
+
+function restart(){
+  startButton.addEventListener('click', () => {
+console.log("hello world");
+
+for (let i = 0; i < lives.length; i++) {
+lives[i].firstChild.src = 'images/oragami-bird.png';
+}
+const chosenLetters = document.querySelectorAll('.chosen');
+for (let i = 0; i < chosenLetters.length; i++) {
+chosenLetters[i].classList.remove("chosen");
+chosenLetters[i].disabled = false;
+}
+document.querySelector("#overlay").classList.remove("lose");
+const letters = document.querySelectorAll('#phrase ul li');
+
+
+for (let i = 0; i < letters.length; i++) {
+ul.removeChild(letters[i]);
+}
+missed = 0;
+let chars = getRandomPhraseAsArray(phrases);
+addPhraseToDisplay(chars);
+});
+}

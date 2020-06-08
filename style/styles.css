@@ -30,7 +30,7 @@ body {
 .navbar {
 opacity: 0.8;
 background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
-z-index: 55;
+z-index: 65;
 }
 
 
@@ -47,7 +47,6 @@ z-index: 55;
 .logo {
   height: 80px;
   width: 100px;
-  margin-top: 30px;
 }
 
 #home-content {
@@ -220,6 +219,8 @@ width: 100%;
     opacity: 1;
     background: black;
     border-bottom: 1px white solid;
+      position: fixed;
+        width: 100%;
   }
 
   #home-content {
@@ -256,9 +257,20 @@ width: 100%;
 
 }
 
+.pagesetup {
+  display: grid;
+  height: 100vh;
+  grid-row: 200px auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav" "mainpage";
+}
+
 @media only screen and (min-width: 600px) {
 
+.logo {
 
+    margin-top: 30px;
+}
 
 
 .navbar {
@@ -287,6 +299,7 @@ width: 100%;
 
 }
 
+
 @media only screen and (min-width: 768px) {
 
 
@@ -306,8 +319,6 @@ width: 100%;
 }
 
   .pagesetup {
-    display: grid;
-    height: 100vh;
     grid-row: 1;
     grid-template-columns: 200px auto;
     grid-template-areas: "nav mainpage";
