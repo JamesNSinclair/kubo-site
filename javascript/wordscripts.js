@@ -2,7 +2,6 @@ const keyboard = document.getElementById('qwerty');
 const answer = document.getElementById('phrase');
 const ul = phrase.querySelector('ul');
 const lives = document.getElementsByClassName("tries");
-const startButton = document.getElementById('startButton');
 const overlay = document.getElementById('overlay');
 const phrases = [
 "sword unbreakable",
@@ -119,7 +118,7 @@ keyboard.addEventListener("click", (event) => {
 function restart(){
   startButton.addEventListener('click', () => {
 console.log("hello world");
-
+const startButton = document.getElementById('startButton');
 for (let i = 0; i < lives.length; i++) {
 lives[i].firstChild.src = 'images/oragami-bird.png';
 }

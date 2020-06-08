@@ -33,7 +33,7 @@ li, ol, ul {
 }
 
 #phrase ul {
-  line-height: 4;
+  line-height: 3;
 }
 
 h2 {
@@ -57,20 +57,23 @@ button {
 }
 
 .main-container {
-  padding-top: 200px;
+  padding-top: 125px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  position: fixed;
+  background-color: orange;
   height: 100%;
-  width: 100%;
-  background-color: green;
 }
+
 
 .section {
   width: 100%;
   padding: 10px;
+}
+
+#scoreboard {
+  padding-bottom: 0;
 }
 
 /* Title */
@@ -85,7 +88,7 @@ button {
 .letter {
   font-size: var(--font-size-medium);
   height: 45px;
-  width: 40px;
+  width: 45px;
   padding: auto;
   margin-right: 2px;
   color: transparent;
@@ -169,7 +172,10 @@ button {
   color: var(--color-lose);
 }
 
-
+.letter {
+  height: 45px;
+  width: 40px;
+}
 
 @media only screen and (min-width: 600px) {
 
@@ -182,8 +188,13 @@ button {
 }
 
 .letter {
-  height: 45px;
-  width: 40px;
+  height: 60px;
+  width:60px;
+}
+
+.main-container {
+  padding-top: 50px;
+  height: 100vh;
 }
 
 }

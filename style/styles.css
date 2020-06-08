@@ -211,6 +211,15 @@ width: 100%;
   animation: overlay-grow 500ms forwards;
 }
 
+.pagesetup {
+  display: grid;
+  height: 100vh;
+  grid-row: 200px auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav" "mainpage";
+
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
@@ -255,14 +264,6 @@ width: 100%;
   height: 100%;
 }
 
-}
-
-.pagesetup {
-  display: grid;
-  height: 100vh;
-  grid-row: 200px auto;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav" "mainpage";
 }
 
 @media only screen and (min-width: 600px) {
