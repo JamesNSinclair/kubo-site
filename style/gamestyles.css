@@ -12,6 +12,9 @@ html {
 
 }
 
+#mainpage {
+  color: white;
+}
 
 h1 {
   font-size: 35px
@@ -191,6 +194,10 @@ transform: scale(1.1);
   background-image: url("../images/game-background.jpg");
   background-size: cover;
      background-repeat: no-repeat;
+  }
+
+  #homecontent {
+    background: rgba(255, 255, 255, .3);
   }
 
   .game-container {
