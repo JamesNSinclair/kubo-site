@@ -1,0 +1,112 @@
+:root {
+  --hue-background: 0, 100%, 20%;
+  --hue-neutral: 351, 7%, 45%;
+  --hue-wrong:  0, 100%, 5%;
+  --hue-correct: 11, 61%, 48%
+}
+
+h2 {
+  color: white;
+}
+
+#body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  width: 600px;
+
+  max-width: 80%;
+    --hue: var(--hue-background);
+  background-color: hsl(var(--hue));
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+  }
+
+#box.correct {
+  color: white;
+}
+
+
+#box.wrong {
+  color: black;
+}
+
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.choice {
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue));
+  border: 1px, solid, gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+
+  }
+
+.choice:hover {
+  border-color: white;
+}
+
+.choice.correct {
+  --hue: var(--hue-correct);
+  border-color: white;
+  font-weight: bold;
+}
+
+.choice.wrong-select {
+    --hue: var(--hue-wrong);
+    border-color: white;
+  }
+
+.choice.wrong {
+      --hue: var(--hue-wrong);
+
+  }
+
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+  font-weight: bold;
+}
+
+
+.quest-style {
+  color: white;
+  font-size: 28px;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+
+#body {
+  width: 400px;
+  width: 80vw;
+
+}
