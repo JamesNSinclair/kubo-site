@@ -157,11 +157,11 @@ const questions = [
 },
 
 {
-  question: "Click the odd one out",
+  question: "Which of these pieces of armour does not appear in Kubo and the Two Strings?",
   answers: [
     {text: 'Breastplate Impenetrable', correct: false},
     {text: 'Sword Unbreakable', correct: false},
-    {text: 'Armour Indestructible', correct: true},
+    {text: 'Gauntlets Indestructible', correct: true},
     {text: 'Helmet Invulnerable', correct: false},
 
 ]
@@ -201,12 +201,12 @@ const questions = [
 },
 
 {
-  question: 'Is this the best Kubo site ever?',
+  question: 'What does Kameyo ask Kubo to implement into his oragami show?',
   answers: [
-    {text: 'Yes', correct: true},
-    {text: 'Yes', correct: true},
-    {text: 'Yes', correct: true},
-    {text: 'Yes', correct: true},
+    {text: 'A fire breathing chicken', correct: true},
+    {text: 'The Moon King', correct: true},
+    {text: 'A lantern', correct: true},
+    {text: 'A three headed frog', correct: true},
 
 ]
 },
