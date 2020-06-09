@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style/styles.css">
-    <link rel="stylesheet" href="style/gamestyles.css">
-    <script src="javascript/script.js" async></script>
+    <link rel="stylesheet" href="style/quiz.css">
+    <script defer src="javascript/quiz.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500&display=swap" rel="stylesheet">
     <title>Kubo and the Two Strings</title>
@@ -44,197 +44,21 @@
 <source src="videos/kubo-crane.mp4" type="video/mp4">
 </video>
 </div>
-
-<div class="overlay-text visible text-center">
-  Click to start
+ <div class="container">
+   <div id="question-container" class="hide">
+   <div id="question">Question</div>
+   <div id="answer-buttons" class="button-grid">
+     <button class="btn"> Answer 1</button>
+     <button class="btn"> Answer 2</button>
+     <button class="btn"> Answer 3</button>
+    <button class="btn"> Answer 4</button>
+   </div>
+ </div>
+   <div class="controls">
+     <button id="start-btn" class="start-btn btn">start</button>
+     <button id="next-btn" class="start-btn btn hide">Next</button>
+ </div>
 </div>
-<div id="game-over-text" class="overlay-text text-center">
-  GAME OVER
-  <span class="overlay-text-small">Click to Restart</span>
-      </div>
-
-      <div id="victory-text" class="overlay-text text-center">
-        VICTORY!!
-        <span class="overlay-text-small">Click to Restart</span>
-            </div>
-
-<div class="game-information justify-content-center top-space">
-
-
-            <h1>Kubo Match 2!</h1>
-          <div  class="d-flex flex-column flexbox  ml-2 mb-2">
-            <div class="game-info">
-              Time <span id="time-remaining">100</span>
-            </div>
-              <div class="game-info">
-                Flips <span id="score"> 0 </span>
-              </div>
-            </div>
-            </div>
-
-<div class="game-container">
-
-    <div class="game-card">
-      <div class="card-back card-face">
-        <img class="card-sleeve" src="images/card-sleeve.jpg">
-      </div>
-      <div class="card-front card-face">
-        <img class="card-value" src="images/beatle.jpg">
-      </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/beatle.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/hanzo.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/hanzo.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/kubo.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/kubo.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/monkey.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/monkey.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/moon-king-worm.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/moon-king-worm.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/moon-king.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/moon-king.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/mother.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/mother.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/sister.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/sister.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/chicken.jpg">
-    </div>
-  </div>
-
-  <div class="game-card">
-      <div class="card-back card-face">
-      <img class="card-sleeve" src="images/card-sleeve.jpg">
-    </div>
-    <div class="card-front card-face">
-      <img class="card-value" src="images/chicken.jpg">
-    </div>
-  </div>
 
 </div>
 
