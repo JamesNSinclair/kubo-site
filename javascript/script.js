@@ -135,7 +135,7 @@ function ready() {
     overlay.addEventListener('click', () => {
       overlay.classList.remove('visible');
       game.startGame();
-    });
+      });
   });
     cards.forEach(card => {
       card.addEventListener('click', () => {
