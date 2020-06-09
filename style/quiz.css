@@ -32,11 +32,13 @@ h2 {
 
 #box.correct {
   color: white;
+
 }
 
 
 #box.wrong {
   color: black;
+
 }
 
 
@@ -69,11 +71,13 @@ h2 {
 
 .choice.wrong-select {
     --hue: var(--hue-wrong);
+    pointer-events: none;
     border-color: white;
   }
 
 .choice.wrong {
       --hue: var(--hue-wrong);
+      pointer-events: none;
 
   }
 
