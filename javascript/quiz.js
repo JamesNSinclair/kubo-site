@@ -157,7 +157,7 @@ const questions = [
 },
 
 {
-  question: 'What is the odd armour piece out from the three correctly listed?',
+  question: "Click the odd one out",
   answers: [
     {text: 'Breastplate Impenetrable', correct: false},
     {text: 'Sword Unbreakable', correct: false},
