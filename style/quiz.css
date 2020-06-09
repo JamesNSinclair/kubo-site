@@ -19,6 +19,10 @@ h2 {
   align-items: center;
 }
 
+.score {
+  color: white;
+}
+
 #box {
   width: 600px;
 
@@ -65,6 +69,7 @@ h2 {
 
 .choice.correct {
   --hue: var(--hue-correct);
+      pointer-events: none;
   border-color: white;
   font-weight: bold;
 }

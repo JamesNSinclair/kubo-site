@@ -1,8 +1,10 @@
 const startButton = document.getElementById('start-btn');
+const points = document.getElementById('score');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+let score = 0;
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -33,6 +35,7 @@ function showQuestion(question) {
    choice.classList.add('choice')
    if (answer.correct) {
      choice.dataset.correct = answer.correct
+
    }
    choice.addEventListener('click', selectAnswer)
    answerButtonsElement.appendChild(choice)
@@ -40,6 +43,7 @@ function showQuestion(question) {
 }
 
 function resetState() {
+  clearStatusClass(document.getElementById('box'))
   nextButton.classList.add('hide')
   while(answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
@@ -49,9 +53,15 @@ function resetState() {
 function selectAnswer(e) {
  const selectedButton = e.target
  const correct = selectedButton.dataset.correct
+ if (correct) {
+   score +=1;
+   console.log(score);
+   points.innerText = "You've scored " + score + " out of 10";
+ }
  setStatusClass(document.getElementById('box'), correct)
  Array.from(answerButtonsElement.children).forEach(button => {
    setStatusClass(button, button.dataset.correct)
+
  })
  if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
@@ -64,7 +74,8 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
-    element.classList.add('correct') }
+    element.classList.add('correct')
+    }
     else {
     element.classList.add('wrong')
   }
@@ -74,6 +85,8 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
+
+
 
 const questions = [
 {
