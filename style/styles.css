@@ -34,6 +34,7 @@ a:hover {
 }
 
 .navbar {
+
 opacity: 0.8;
 background: linear-gradient(315deg, #000000 0%, #b82e1f 84%);
 z-index: 65;
