@@ -224,7 +224,7 @@ right: 0;
 
 .pagesetup {
   display: grid;
-  height: 100vh;
+
   grid-row: 200px auto;
   grid-template-columns: 1fr;
   grid-template-areas: "nav" "mainpage";
@@ -343,10 +343,6 @@ right: 0;
 }
 
 
-.navbar {
-  height: 100vh;
-}
-
 
   .trivia {
    height: 100vh;
@@ -363,15 +359,17 @@ right: 0;
 }
 
 
+.main-intro h2,
+.main-intro p {
+  margin: 15px 30px;
+}
+
+
 @media only screen and (min-width: 768px) {
 
 
 
-  .navbar-expand-lg .navbar-nav,
-  .navbar {
-    display: flex;
-    flex-direction: column;
-  }
+
 
 #sitenav {
   grid-area: nav;
@@ -381,11 +379,6 @@ right: 0;
   grid-area: mainpage;
 }
 
-  .pagesetup {
-    grid-row: 1;
-    grid-template-columns: 200px auto;
-    grid-template-areas: "nav mainpage";
-  }
 
 .navbar-brand {
   margin-top: 2rem;
@@ -395,10 +388,6 @@ right: 0;
   flex-grow: 0;
 }
 
-.main-intro h2,
-.main-intro p {
-  margin: 15px 200px;
-}
 
 }
 
@@ -406,6 +395,25 @@ right: 0;
 
 @media only screen and (min-width: 1024px) {
 
+  .pagesetup {
+    height: 100vh;
+    grid-row: 1;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "nav mainpage";
+  }
 
+  .navbar {
+    height: 100vh;
+  }
 
+  .navbar-expand-lg .navbar-nav,
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-intro h2,
+  .main-intro p {
+    margin: 15px 200px;
+  }
 }
